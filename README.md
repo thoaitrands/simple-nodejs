@@ -40,6 +40,28 @@ Ensure you have the following installed on your system:
 2. Open your browser and visit:
     ```arduino
     http://localhost:3000
+3. Dockerize the Application
+
+    3.1. Build docker image.
+    ```
+    docker build -t node-express-docker .
+    ```
+    3.2. Run docker container.
+    ```
+    docker run -p 3000:3000 node-express-docker
+    ```
+    3.2. Run docker container in Detached Mode (Optional)
+    ```
+    docker run -d -p 3000:3000 node-express-docker
+    ```
+    3.2.1. Push image to docker hub
+    ```
+    docker push thoaitrands/node-express-docker
+    ```
+    3.3. Verify the Application
+    ```
+    http://localhost:3000
+    ```
 
 ### 🛠️ Technologies Used
 - Node.js: JavaScript runtime.
@@ -52,6 +74,7 @@ Ensure you have the following installed on your system:
     ├── server.js       # Main server file
     ├── package.json    # Project metadata and dependencies
     └── README.md       # Documentation
+    ├── Dockerfile      # Dockerize
 ```
 
 ## 🤝 Contributing

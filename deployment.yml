@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-express-docker
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: node-express-docker
+  template:
+    metadata:
+      labels:
+        app: node-express-docker
+    spec:
+      containers:
+      - name: node-express-docker
+        image: thoaitrands/node-express-docker:latest
+        ports:
+        - containerPort: 3000
