@@ -1,0 +1,42 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout the code from the repository
+                git 'https://github.com/your-repo/simple-nodejs.git'
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                // Install project dependencies
+                sh 'npm install'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                // Build the project
+                sh 'npm run build'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                // Run tests
+                sh 'npm test'
+            }
+        }
+    }
+
+    post {
+        always {
+            // Archive the build artifacts
+            archiveArtifacts artifacts: 'dist/**', allowEmptyArchive: true
+            // Publish test results
+            junit 'test-results.xml'
+        }
+    }
+}
