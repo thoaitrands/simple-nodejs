@@ -81,6 +81,8 @@ Ensure you have the following installed on your system:
 
 ## Advance architech
 
+## DevOps setting
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes. 🙌
