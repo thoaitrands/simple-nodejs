@@ -11,7 +11,7 @@
 | Ứng dụng                       | Dịch vụ nội bộ giữa các pod trong cluster                                 | Dịch vụ có thể truy cập từ bên ngoài cluster (thường dùng trong phát triển, thử nghiệm hoặc expose dịch vụ cho người dùng bên ngoài) |
 
 ### Khi nào sử dụng ClusterIP và NodePort ?
-- ClusterIP: 
+- ClusterIP:
     + Sử dụng khi dịch vụ chỉ cần truy cập từ bên trong cluster.
     + Thích hợp cho các dịch vụ nội bộ giữa các pod.
 - NodePort:
