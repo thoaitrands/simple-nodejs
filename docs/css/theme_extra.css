@@ -1,0 +1,22 @@
+.md-header {
+  background: linear-gradient(90deg, #1976d2 0%, #21cbf3 100%);
+}
+
+.md-logo img {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.md-typeset h1, .md-typeset h2 {
+  color: #1976d2;
+}
+
+.md-footer {
+  background: #222;
+  color: #fff;
+}
+
+body {
+  background: url('../images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}

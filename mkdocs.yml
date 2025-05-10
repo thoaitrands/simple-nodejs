@@ -1,0 +1,56 @@
+site_name: ShareToYou
+site_description: A collection of resources to learn various topics.
+site_author: debug2live
+nav:
+  - Home: index.md
+  - About: about.md
+  - Resources:
+      - Services: services.md
+
+theme:
+  name: material
+  logo: images/logo.png         # Uncomment and add your logo
+  favicon: images/favicon.ico   # Uncomment and add your favicon
+  palette:
+    - scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.instant
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.code.annotate
+    - content.tabs.link
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
+    - header.autohide
+    - announce.dismiss
+extra_css:
+  - css/theme_extra.css         # Add custom CSS for further tweaks
+plugins:
+  - search
+  - awesome-pages
+  - git-revision-date
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - footnotes
+  - tables
